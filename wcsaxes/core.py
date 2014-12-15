@@ -248,12 +248,12 @@ class WCSAxes(Axes):
 
             if coord_in == coord_out:
 
-                return (WCSPixel2WorldTransform(self.wcs)
+                return (WCSPixel2WorldTransform(self.wcs, slice=self.slices)
                         + WCSWorld2PixelTransform(frame))
 
             else:
 
-                return (WCSPixel2WorldTransform(self.wcs)
+                return (WCSPixel2WorldTransform(self.wcs, slice=self.slices)
                         + CoordinateTransform(self.wcs, frame)
                         + WCSWorld2PixelTransform(frame))
 
@@ -263,13 +263,13 @@ class WCSAxes(Axes):
 
         elif isinstance(frame, Transform):
 
-            pixel2world = WCSPixel2WorldTransform(self.wcs)
+            pixel2world = WCSPixel2WorldTransform(self.wcs, slice=self.slices)
 
             return pixel2world + frame
 
         else:
 
-            pixel2world = WCSPixel2WorldTransform(self.wcs)
+            pixel2world = WCSPixel2WorldTransform(self.wcs, slice=self.slices)
 
             if frame == 'world':
 

@@ -1,7 +1,7 @@
 0.4 (unreleased)
 ----------------
 
-- No changes yet
+- Fix bug when plotting overlays on images with 3+ WCS dimensions.
 
 0.3 (2014-12-07)
 ----------------
