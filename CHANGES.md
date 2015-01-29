@@ -3,6 +3,8 @@
 
 - No changes yet
 
+- Fix bug with plotting RGB images. [#15]
+
 0.3 (2014-12-07)
 ----------------
 
